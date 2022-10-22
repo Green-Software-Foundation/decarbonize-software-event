@@ -1,0 +1,199 @@
+<section id="agenda">
+  <h2>Agenda</h2>
+  <p>Timezone: <span id="timezone">PST</span></p>
+  <table>
+    <tbody id="tbody">
+      <tr>
+        <td>09:00</td>
+        <td>State of Green Software</td>
+        <td>Asim Hussain</td>
+      </tr>
+      <tr>
+        <td>09:05</td>
+        <td>Carbon Aware SDK v 1.0</td>
+        <td>Vaughan Knight</td>
+      </tr>
+      <tr>
+        <td>09:10</td>
+        <td>Panel discussion and Q&A</td>
+        <td>TBC</td>
+      </tr>
+      <tr>
+        <td>09:30</td>
+        <td>SCI v1.0</td>
+        <td>Henry TBC</td>
+      </tr>
+      <tr>
+        <td>09:40</td>
+        <td>Hackathon finalists</td>
+        <td>Abishek TBC</td>
+      </tr>
+      <tr>
+        <td>09:45</td>
+        <td>Panel discussion and Q&A</td>
+        <td>TBC</td>
+      </tr>
+      <tr>
+        <td>10:05</td>
+        <td>Training and Patterns</td>
+        <td>Bill TBC & Sarah TBC</td>
+      </tr>
+      <tr>
+        <td>10:15</td>
+        <td>Hackathon finalists</td>
+        <td>TBC</td>
+      </tr>
+      <tr>
+        <td>10:20</td>
+        <td>Panel discussion and Q&A</td>
+        <td>TBC</td>
+      </tr>
+      <tr>
+        <td>10:40</td>
+        <td>State of Green Software Report and Speaker Bureau</td>
+        <td>Asim Hussain</td>
+      </tr>
+      <tr>
+        <td>10:45</td>
+        <td>Hackathon winners</td>
+        <td>Ismael Velasco</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<script>
+  const tableBody = document.getElementById("tbody");
+  const timezone = document.getElementById("timezone");
+  const agenda = [
+    {
+      time: new Date("November 10, 2022 17:00:00 GMT"),
+      title: "State of Green Software",
+      speaker: "Asim Hussain",
+    },
+    {
+      time: new Date("November 10, 2022 17:05:00 GMT"),
+      title: "Carbon Aware SDK v 1.0",
+      speaker: "Vaughan Knight",
+    },
+    {
+      time: new Date("November 10, 2022 17:10:00 GMT"),
+      title: "Panel discussion and Q&A",
+      speaker: "TBC",
+    },
+    {
+      time: new Date("November 10, 2022 17:30:00 GMT"),
+      title: "SCI v1.0",
+      speaker: "Henry TBC",
+    },
+    {
+      time: new Date("November 10, 2022 17:40:00 GMT"),
+      title: "Hackathon finalists",
+      speaker: "Abishek TBC",
+    },
+    {
+      time: new Date("November 10, 2022 17:45:00 GMT"),
+      title: "Panel discussion and Q&A",
+      speaker: "TBC",
+    },
+    {
+      time: new Date("November 10, 2022 18:05:00 GMT"),
+      title: "Training and Patterns",
+      speaker: "Bill TBC & Sarah TBC",
+    },
+    {
+      time: new Date("November 10, 2022 18:15:00 GMT"),
+      title: "Hackathon finalists",
+      speaker: "TBC",
+    },
+    {
+      time: new Date("November 10, 2022 18:20:00 GMT"),
+      title: "Panel discussion and Q&A",
+      speaker: "TBC",
+    },
+    {
+      time: new Date("November 10, 2022 18:40:00 GMT"),
+      title: "State of Green Software Report and Speaker Bureau",
+      speaker: "Asim Hussain",
+    },
+    {
+      time: new Date("November 10, 2022 18:45:00 GMT"),
+      title: "Hackathon winners",
+      speaker: "Ismael Velasco",
+    },
+  ];
+  if (tableBody) {
+    tableBody.innerHTML = agenda
+      .map(
+        (item) =>
+          `<tr><td class="time">${item.time.toLocaleTimeString("en-GB", {
+            hour: "2-digit",
+            minute: "2-digit",
+          })}</td><td>${item.title}</td><td>${item.speaker}</td></tr>`
+      )
+      .join("");
+  }
+  if (timezone) {
+    timezone.innerHTML = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  }
+</script>
+<style>
+  section {
+    margin-top: 96px;
+    background: #09121a;
+    padding: 72px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  section::before {
+    content: "";
+    position: absolute;
+    bottom: -100px;
+    left: -200px;
+    height: 502px;
+    width: 545px;
+    background: url("/images/agenda-left.svg");
+    background-repeat: no-repeat;
+    user-select: none;
+    pointer-events: none;
+  }
+  section::after {
+    content: "";
+    position: absolute;
+    top: -100px;
+    right: -200px;
+    height: 503px;
+    width: 535px;
+    background: url("/images/agenda-right.svg");
+    background-repeat: no-repeat;
+    user-select: none;
+    pointer-events: none;
+  }
+  h2 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  p {
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 96px;
+  }
+  p span {
+    color: #aecc53;
+  }
+  table {
+    width: 840px;
+    font-size: 20px;
+    margin: auto;
+    border-collapse: collapse;
+  }
+  :global(tr) {
+    border-bottom: 2px solid #f4f6f815;
+  }
+  :global(td) {
+    padding: 32px 0;
+  }
+</style>

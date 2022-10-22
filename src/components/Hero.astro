@@ -1,0 +1,229 @@
+<section id="register" class="container">
+  <div class="illustration">
+    <img src="/images/hero-left.svg" alt="Trees & Plants" />
+  </div>
+  <div class="content">
+    <div class="logo">
+      <img src="/images/logo.svg" alt="" />
+    </div>
+    <h1 class="title">Decarbonize <br /> Software</h1>
+    <p class="subtitle">The latest advancements in green software</p>
+    <p class="time" id="time">November 10th - 4pm GMT (8am PT)</p>
+    <!-- <form action="">
+      <div>
+        <input type="text" placeholder="example@domain.com" />
+      </div>
+      <button type="submit">Register</button>
+    </form> -->
+    <!-- Begin Mailchimp Signup Form -->
+    <link
+      href="//cdn-images.mailchimp.com/embedcode/classic-071822.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <div id="mc_embed_signup">
+      <form
+        action="https://foundation.us5.list-manage.com/subscribe/post?u=ddc99c7db248c3df0ef4f7d24&id=8f63926b6f&f_id=003e80e9f0"
+        method="post"
+        id="mc-embedded-subscribe-form"
+        name="mc-embedded-subscribe-form"
+        class="validate"
+        target="_blank"
+        novalidate
+      >
+        <div id="mc_embed_signup_scroll">
+          <div class="mc-field-group">
+            <!-- <label for="mce-EMAIL"
+              >Email Address <span class="asterisk">*</span>
+            </label> -->
+            <input
+              type="email"
+              value=""
+              name="EMAIL"
+              placeholder="example@domain.com"
+              class="required email"
+              id="mce-EMAIL"
+              required
+            />
+          </div>
+          <div hidden="true">
+            <input type="hidden" name="tags" value="4061513" />
+          </div>
+          <div id="mce-responses" class="clear">
+            <div class="response" id="mce-error-response" style="display:none">
+            </div>
+            <div
+              class="response"
+              id="mce-success-response"
+              style="display:none"
+            >
+            </div>
+          </div>
+          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <div style="position: absolute; left: -5000px;" aria-hidden="true">
+            <input
+              type="text"
+              name="b_ddc99c7db248c3df0ef4f7d24_8f63926b6f"
+              tabindex="-1"
+              value=""
+            />
+          </div>
+          <div class="clear button-wrapper">
+            <input
+              type="submit"
+              value="Register"
+              name="subscribe"
+              id="mc-embedded-subscribe"
+              class="button"
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+    <script
+      type="text/javascript"
+      src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
+    ></script><script type="text/javascript">
+      (function ($) {
+        window.fnames = new Array();
+        window.ftypes = new Array();
+        fnames[0] = "EMAIL";
+        ftypes[0] = "email";
+        fnames[1] = "FNAME";
+        ftypes[1] = "text";
+        fnames[2] = "LNAME";
+        ftypes[2] = "text";
+        fnames[3] = "ADDRESS";
+        ftypes[3] = "address";
+        fnames[4] = "PHONE";
+        ftypes[4] = "phone";
+      })(jQuery);
+      var $mcj = jQuery.noConflict(true);
+    </script>
+    <script></script>
+    <!--End mc_embed_signup-->
+  </div>
+  <div class="illustration">
+    <img src="/images/hero-right.svg" alt="Trees & Plants" />
+  </div>
+</section>
+<script>
+  const date = new Date("November 10, 2022 17:00:00 GMT");
+  const formatedDate = date.toLocaleString("en-US", {
+    month: "long",
+    day: "2-digit",
+  });
+  const formatedTime = date.toLocaleString("en-US", {
+    hour: "numeric",
+    minute: "numeric",
+    timeZoneName: "short",
+  });
+  const nth = function (d: number) {
+    if (d > 3 && d < 21) return "th";
+    switch (d % 10) {
+      case 1:
+        return "st";
+      case 2:
+        return "nd";
+      case 3:
+        return "rd";
+      default:
+        return "th";
+    }
+  };
+  const timeElement = document.getElementById("time");
+  if (timeElement) {
+    timeElement.innerHTML = `${formatedDate}${nth(
+      date.getDate()
+    )} - ${formatedTime}`;
+  }
+</script>
+<style>
+  .container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 170px;
+  }
+  .illustration {
+    margin-top: 112px;
+  }
+  .content {
+    text-align: center;
+  }
+  .logo {
+    margin-bottom: 32px;
+  }
+  .logo img {
+    margin: auto;
+  }
+  .title {
+    font-weight: 900;
+    font-size: 73px;
+    line-height: 91%;
+    text-align: center;
+    letter-spacing: 0.175em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .subtitle {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+    color: #aecc53;
+    margin-bottom: 32px;
+  }
+  .time {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 32px;
+    color: #c8d3dd;
+    margin-bottom: 40px;
+  }
+  .mc-field-group {
+    width: 360px !important;
+    margin: auto;
+    padding: 0 !important;
+  }
+  #mc_embed_signup .mc-field-group input {
+    background: #11283c !important;
+    border: none;
+    padding: 16px !important;
+    color: inherit;
+    font-size: 16px;
+    outline: none;
+    transition: box-shadow 0.2s ease-in-out;
+    font-family: "Nunito Sans";
+  }
+  #mc_embed_signup .mc-field-group input:focus {
+    box-shadow: 0 0 0 3px rgb(145 167 188 / 50%);
+  }
+  #mc_embed_signup .mc-field-group input::placeholder {
+    color: #ffffff;
+    opacity: 0.3;
+  }
+  :global(.mce_inline_error) {
+    background-color: transparent !important;
+    margin-bottom: 0 !important;
+  }
+  .button-wrapper {
+    text-align: center;
+    margin-top: 24px;
+  }
+  #mc_embed_signup .button {
+    background-color: #aecc53 !important;
+    border: none !important;
+    padding: 12px 32px !important;
+    color: #111827 !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    outline: none !important;
+    transition: box-shadow 0.2s ease-in-out !important;
+    cursor: pointer !important;
+    margin: 0 !important;
+    height: initial !important;
+    border-radius: 0 !important;
+  }
+  #mc_embed_signup .button:focus {
+    box-shadow: 0 0 0 3px rgb(174 204 83 / 50%);
+  }
+</style>

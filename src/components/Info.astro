@@ -1,0 +1,98 @@
+<section id="about">
+  <h2>Online Event</h2>
+  <p class="subtitle">By <span>Green Software Foundation</span></p>
+  <img
+    class="separator"
+    src="/images/separator-horizontal.svg"
+    alt="Separator"
+  />
+  <div class="content">
+    <h3>
+      Combat climate change using green software principles and best practices.
+    </h3>
+    <p>
+      Green Software Foundation is excited to host an event during COP27 to
+      highlight advancements in decarbonising software, including the launch of
+      a Software Carbon Intensity Specification – a new ISO standard in
+      measuring green software, a new training program by The Linux Foundation,
+      and a Patterns Catalogue for software engineers at every level to identify
+      specific, actionable steps to green software.
+    </p>
+    <p>
+      Developing and prioritizing software solutions that use more clean energy
+      and guide climate-conscious energy consumption will dramatically reduce
+      the carbon load needed for technology to meet future needs.
+    </p>
+    <p>
+      Now, a wide range of tools and resources will help get us closer to that
+      reality.
+    </p>
+  </div>
+</section>
+<style>
+  section {
+    margin-top: 200px;
+    text-align: center;
+    min-height: 1024px;
+    position: relative;
+  }
+  section::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("/images/info-left.svg");
+    background-position: left;
+    background-repeat: no-repeat;
+    user-select: none;
+    pointer-events: none;
+  }
+  section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: url("/images/info-right.svg");
+    background-position: right;
+    background-repeat: no-repeat;
+    user-select: none;
+    pointer-events: none;
+  }
+  h2 {
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 16px;
+  }
+  .subtitle {
+    font-size: 30px;
+    margin-bottom: 44px;
+  }
+  .subtitle span {
+    color: #aecc53;
+  }
+  .separator {
+    margin-bottom: 64px;
+  }
+  .content {
+    max-width: 840px;
+    margin: auto;
+  }
+  .content h3 {
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 55px;
+    text-transform: uppercase;
+    margin-bottom: 48px;
+  }
+  .content p {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 32px;
+    text-align: left;
+    padding: 0 96px;
+  }
+</style>

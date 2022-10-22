@@ -1,0 +1,150 @@
+---
+import "@fontsource/nunito-sans/400.css";
+import "@fontsource/nunito-sans/600.css";
+import "@fontsource/nunito-sans/700.css";
+import "@fontsource/nunito-sans/800.css";
+import "@fontsource/nunito-sans/900.css";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Decarbonize Software | Green Software Foundation</title>
+  </head>
+  <body>
+    <main>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#register">Register</a>
+      </nav>
+      <slot />
+    </main>
+    <footer>
+      <div class="logo">
+        <img src="/images/logo-gsf.svg" alt="GSF Logo" />
+      </div>
+      <div class="links">
+        <a href="https://greensoftware.foundation/policy/terms"
+          >Privacy Policy</a
+        > | <a href="https://greensoftware.foundation/code-of-conduct"
+          >Code of Conduct</a
+        >
+      </div>
+      <p class="copyrights">
+        Copyright © 2022 Joint Development Foundation Projects, LLC, <br />
+        Green Software Foundation Series
+      </p>
+    </footer>
+    <style is:global>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      * {
+        margin: 0;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+      html {
+        font-family: "Nunito", sans-serif;
+        background-color: #0b161f;
+        color: #fbfcf6;
+        scroll-behavior: smooth;
+      }
+      body {
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      img,
+      picture,
+      video,
+      canvas,
+      svg {
+        display: block;
+        max-width: 100%;
+      }
+
+      input,
+      button,
+      textarea,
+      select {
+        font: inherit;
+      }
+
+      p,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        overflow-wrap: break-word;
+      }
+
+      #root,
+      #__next {
+        isolation: isolate;
+      }
+      .separator {
+        margin: auto;
+      }
+      .time {
+        font-weight: 700;
+        color: #aecc53;
+      }
+      footer {
+        text-align: center;
+        padding: 54px 0;
+      }
+      footer img {
+        margin: auto;
+      }
+      footer .logo {
+        margin-bottom: 18px;
+      }
+      footer .links {
+        margin-bottom: 8px;
+      }
+      footer .links a {
+        color: inherit;
+        font-size: 14px;
+      }
+      footer .copyrights {
+        font-size: 14px;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 32px;
+        background-color: #e9edf2;
+        font-size: 16px;
+        font-weight: 700;
+        width: 400px;
+        position: sticky;
+        margin-top: 16px;
+        top: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 100;
+        border-radius: 50px;
+        box-shadow: 0px 4px 8px 4px #05080c94;
+      }
+      nav a {
+        color: #11283c;
+        text-decoration: none;
+      }
+    </style>
+  </body>
+</html>
