@@ -16,38 +16,37 @@
       <button type="submit">Register</button>
     </form> -->
     <!-- Begin Mailchimp Signup Form -->
-    <link
-      href="//cdn-images.mailchimp.com/embedcode/classic-071822.css"
-      rel="stylesheet"
-      type="text/css"
-    />
     <div id="mc_embed_signup">
       <form
-        action="https://foundation.us5.list-manage.com/subscribe/post?u=ddc99c7db248c3df0ef4f7d24&id=8f63926b6f&f_id=003e80e9f0"
+        action="https://foundation.us5.list-manage.com/subscribe/post?u=ddc99c7db248c3df0ef4f7d24&id=404bf38b27&f_id=006280e9f0"
         method="post"
         id="mc-embedded-subscribe-form"
         name="mc-embedded-subscribe-form"
         class="validate"
-        target="_blank"
+        target="_self"
         novalidate
       >
         <div id="mc_embed_signup_scroll">
           <div class="mc-field-group">
-            <!-- <label for="mce-EMAIL"
-              >Email Address <span class="asterisk">*</span>
-            </label> -->
             <input
               type="email"
               value=""
               name="EMAIL"
-              placeholder="example@domain.com"
               class="required email"
               id="mce-EMAIL"
+              placeholder="example@domain.com"
               required
             />
+            <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
           </div>
-          <div hidden="true">
-            <input type="hidden" name="tags" value="4061513" />
+          <div class="checkbox-wrapper">
+            <input
+              type="checkbox"
+              value="1"
+              name="group[383329][1]"
+              id="mce-group[383329]-383329-0"
+            />
+            <span>Subscribe to our newsletter</span>
           </div>
           <div id="mce-responses" class="clear">
             <div class="response" id="mce-error-response" style="display:none">
@@ -63,15 +62,15 @@
           <div style="position: absolute; left: -5000px;" aria-hidden="true">
             <input
               type="text"
-              name="b_ddc99c7db248c3df0ef4f7d24_8f63926b6f"
+              name="b_ddc99c7db248c3df0ef4f7d24_404bf38b27"
               tabindex="-1"
               value=""
             />
           </div>
-          <div class="clear button-wrapper">
+          <div class="clear">
             <input
               type="submit"
-              value="Register"
+              value="Subscribe"
               name="subscribe"
               id="mc-embedded-subscribe"
               class="button"
@@ -100,7 +99,6 @@
       })(jQuery);
       var $mcj = jQuery.noConflict(true);
     </script>
-    <script></script>
     <!--End mc_embed_signup-->
   </div>
   <div class="illustration">
@@ -180,50 +178,78 @@
     margin-bottom: 40px;
   }
   .mc-field-group {
-    width: 360px !important;
+    width: 360px;
     margin: auto;
-    padding: 0 !important;
+    padding: 0;
   }
-  #mc_embed_signup .mc-field-group input {
-    background: #11283c !important;
+  .mc-field-group input {
+    background: #11283c;
     border: none;
-    padding: 16px !important;
+    padding: 16px;
     color: inherit;
     font-size: 16px;
     outline: none;
-    transition: box-shadow 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     font-family: "Nunito Sans";
+    width: 100%;
+    border: 2px solid transparent;
   }
-  #mc_embed_signup .mc-field-group input:focus {
+  .mc-field-group input:focus {
     box-shadow: 0 0 0 3px rgb(145 167 188 / 50%);
   }
-  #mc_embed_signup .mc-field-group input::placeholder {
+  .mc-field-group input::placeholder {
     color: #ffffff;
     opacity: 0.3;
   }
   :global(.mce_inline_error) {
-    background-color: transparent !important;
-    margin-bottom: 0 !important;
+    background-color: transparent;
+    margin-bottom: 0;
   }
   .button-wrapper {
     text-align: center;
     margin-top: 24px;
   }
-  #mc_embed_signup .button {
-    background-color: #aecc53 !important;
-    border: none !important;
-    padding: 12px 32px !important;
-    color: #111827 !important;
-    font-weight: 700 !important;
-    font-size: 16px !important;
-    outline: none !important;
-    transition: box-shadow 0.2s ease-in-out !important;
-    cursor: pointer !important;
-    margin: 0 !important;
-    height: initial !important;
-    border-radius: 0 !important;
+  .button {
+    background-color: #aecc53;
+    border: none;
+    padding: 12px 32px;
+    color: #111827;
+    font-weight: 700;
+    font-size: 16px;
+    outline: none;
+    transition: box-shadow 0.2s ease-in-out;
+    cursor: pointer;
+    margin: 0;
+    height: initial;
+    border-radius: 0;
   }
-  #mc_embed_signup .button:focus {
+  .button:focus {
     box-shadow: 0 0 0 3px rgb(174 204 83 / 50%);
+  }
+  :global(#mc_embed_signup input.mce_inline_error) {
+    border-color: #f13a38;
+  }
+  :global(#mc_embed_signup div.mce_inline_error) {
+    color: #f13a38;
+    font-size: 12px;
+    margin-top: 4px;
+    background: none;
+  }
+  .checkbox-wrapper {
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+  #mce-responses {
+    width: 360px;
+    margin: auto;
+  }
+  #mce-success-response {
+    background: #aecc53;
+    color: #111827;
+    font-weight: 600;
+    margin-bottom: 32px;
+    padding: 16px 0;
   }
 </style>
