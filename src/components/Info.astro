@@ -95,4 +95,40 @@
     text-align: left;
     padding: 0 96px;
   }
+  @media (max-width: 640px) {
+    section {
+      margin-top: 64px;
+      margin-bottom: 64px;
+      padding: 0 32px;
+      min-height: initial;
+    }
+    section::before,
+    section::after {
+      opacity: 0.2;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 0px;
+    }
+    .subtitle {
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+    .separator {
+      margin-bottom: 32px;
+    }
+    .content h3 {
+      font-size: 24px;
+      line-height: 33px;
+      margin-bottom: 32px;
+      text-align: left;
+    }
+    .content p {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 16px;
+      padding: 0;
+    }
+  }
 </style>

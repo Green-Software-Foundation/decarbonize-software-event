@@ -1,5 +1,5 @@
 <section id="register" class="container">
-  <div class="illustration">
+  <div class="illustration left">
     <img src="/images/hero-left.svg" alt="Trees & Plants" />
   </div>
   <div class="content">
@@ -9,13 +9,6 @@
     <h1 class="title">Decarbonize <br /> Software</h1>
     <p class="subtitle">The latest advancements in green software</p>
     <p class="time" id="time">November 10th - 4pm GMT (8am PT)</p>
-    <!-- <form action="">
-      <div>
-        <input type="text" placeholder="example@domain.com" />
-      </div>
-      <button type="submit">Register</button>
-    </form> -->
-    <!-- Begin Mailchimp Signup Form -->
     <div id="mc_embed_signup">
       <form
         action="https://foundation.us5.list-manage.com/subscribe/post?u=ddc99c7db248c3df0ef4f7d24&id=404bf38b27&f_id=006280e9f0"
@@ -70,7 +63,7 @@
           <div class="clear">
             <input
               type="submit"
-              value="Subscribe"
+              value="Register"
               name="subscribe"
               id="mc-embedded-subscribe"
               class="button"
@@ -101,8 +94,11 @@
     </script>
     <!--End mc_embed_signup-->
   </div>
-  <div class="illustration">
+  <div class="illustration right">
     <img src="/images/hero-right.svg" alt="Trees & Plants" />
+  </div>
+  <div class="illustration-mobile">
+    <img src="/images/hero-mobile.svg" alt="Trees & Plants" />
   </div>
 </section>
 <script>
@@ -153,6 +149,10 @@
   }
   .logo img {
     margin: auto;
+  }
+  .illustration-mobile {
+    display: none;
+    margin-top: 64px;
   }
   .title {
     font-weight: 900;
@@ -251,5 +251,69 @@
     font-weight: 600;
     margin-bottom: 32px;
     padding: 16px 0;
+  }
+
+  @media (max-width: 1440px) {
+    .container {
+      display: block;
+    }
+    .illustration {
+      margin-top: 32px;
+      position: absolute;
+      bottom: -100px;
+      width: 300px;
+      z-index: 0;
+    }
+    .illustration.left {
+      left: 0;
+    }
+    .illustration.right {
+      right: 0;
+    }
+    .content {
+      z-index: 1;
+      position: relative;
+    }
+  }
+  @media (max-width: 640px) {
+    .container {
+      margin-top: 40px;
+      padding: 0 32px;
+      display: block;
+    }
+    .logo {
+      width: 80px;
+      margin: auto;
+      margin-bottom: 16px;
+    }
+    .illustration {
+      display: none;
+    }
+    .illustration-mobile {
+      display: block;
+    }
+    .illustration-mobile img {
+      margin: auto;
+    }
+    .title {
+      font-size: 30px;
+      line-height: 30px;
+    }
+    .subtitle {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .time {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .mc-field-group {
+      max-width: 320px;
+      width: 100%;
+    }
+    .mc-field-group input {
+      padding: 12px;
+      font-size: 14px;
+    }
   }
 </style>

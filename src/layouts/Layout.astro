@@ -145,6 +145,30 @@ import "@fontsource/nunito-sans/900.css";
         color: #11283c;
         text-decoration: none;
       }
+      @media (max-width: 640px) {
+        nav {
+          bottom: 0;
+          top: initial;
+          position: fixed;
+          width: 100%;
+          border-radius: 0;
+          padding: 8px 32px;
+          font-size: 14px;
+        }
+        footer {
+          padding: 64px;
+          padding-top: 32px;
+        }
+        footer .logo {
+          width: 120px;
+          margin: auto;
+          margin-bottom: 16px;
+        }
+        footer .links a,
+        footer .copyrights {
+          font-size: 12px;
+        }
+      }
     </style>
   </body>
 </html>
