@@ -1,13 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 36 36">
-  <path fill="#000" d="M22.25 4h-8.5a1 1 0 0 0-.96.73l-5.54 19.4a.5.5 0 0 0 .62.62l5.05-1.44a2 2 0 0 0 1.38-1.4l3.22-11.66a.5.5 0 0 1 .96 0l3.22 11.67a2 2 0 0 0 1.38 1.39l5.05 1.44a.5.5 0 0 0 .62-.62l-5.54-19.4a1 1 0 0 0-.96-.73Z"/>
-  <path fill="url(#gradient)" d="M18 28a7.63 7.63 0 0 1-5-2c-1.4 2.1-.35 4.35.6 5.55.14.17.41.07.47-.15.44-1.8 2.93-1.22 2.93.6 0 2.28.87 3.4 1.72 3.81.34.16.59-.2.49-.56-.31-1.05-.29-2.46 1.29-3.25 3-1.5 3.17-4.83 2.5-6-.67.67-2.6 2-5 2Z"/>
-  <defs>
-    <linearGradient id="gradient" x1="16" x2="16" y1="32" y2="24" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#000"/>
-      <stop offset="1" stop-color="#000" stop-opacity="0"/>
-    </linearGradient>
-  </defs>
-	<style>
-    @media (prefers-color-scheme:dark){:root{filter:invert(100%)}}
-  </style>
-</svg>
+<svg id="b13bb3a1-666b-492b-b2b3-eb52aa3c845b" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="25.51" height="21.83" viewBox="0 0 25.51 21.83"><polygon points="12.75 5.75 17.22 8.33 17.22 13.49 12.75 16.07 8.29 13.49 8.29 8.33 12.75 5.75" style="fill:#efefef"/><path d="M12.75,1.81,4.87,6.36v9.1L12.75,20l7.88-4.55V6.36ZM18,13.93l-5.24,3-5.23-3v-6l5.23-3,5.24,3Z" style="fill:#fff"/><polygon points="6.54 21.83 0 21.83 0 0 6.54 0 6.54 1.21 1.21 1.21 1.21 20.61 6.54 20.61 6.54 21.83" style="fill:#acc951"/><polygon points="25.51 21.83 18.97 21.83 18.97 20.61 24.29 20.61 24.29 1.21 18.97 1.21 18.97 0 25.51 0 25.51 21.83" style="fill:#acc951"/></svg>
