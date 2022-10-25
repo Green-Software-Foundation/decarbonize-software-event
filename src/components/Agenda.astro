@@ -1,67 +1,65 @@
 <section id="agenda">
   <h2>Agenda</h2>
-  <p>Timezone: <span id="timezone">PST</span></p>
   <table>
     <tbody id="tbody">
       <tr>
-        <td>09:00</td>
-        <td>State of Green Software</td>
+        <td>Welcome</td>
         <td>Asim Hussain</td>
       </tr>
       <tr>
-        <td>09:05</td>
-        <td>Carbon Aware SDK v 1.0</td>
+        <td>Panel discussion and Q&A</td>
+        <td>Asim Hussain, Sanjay Podder, Ben Logan, Niels Freier</td>
+      </tr>
+      <tr>
+        <td>SCI v1.0</td>
+        <td>Henry Richardson</td>
+      </tr>
+      <tr>
+        <td>Hackathon finalists</td>
+        <td>Abishek Gupta</td>
+      </tr>
+      <tr>
+        <td>Panel discussion and Q&A</td>
+        <td
+          >Tammy McClain, Scott Chamberlin, Lisa McNally, Santiago Fontanarrosa</td
+        >
+      </tr>
+      <tr>
+        <td>Training and Patterns</td>
+        <td>Bill Johnson, Sarah Hsu</td>
+      </tr>
+      <tr>
+        <td>Hackathon finalists</td>
+        <td>Bill Johnson</td>
+      </tr>
+      <tr>
+        <td>Panel discussion and Q&A</td>
+        <td>Anne Currie, Colleen Josephson, Ally Vaughn, Chris Lloyd</td>
+      </tr>
+      <tr>
+        <td>State of Green Software Report</td>
+        <td>Ismael Velasco</td>
+      </tr>
+      <tr>
+        <td>Speaker Bureau</td>
+        <td>Asim Hussain</td>
+      </tr>
+      <tr>
+        <td>Carbon Aware SDK v1.0</td>
         <td>Vaughan Knight</td>
       </tr>
       <tr>
-        <td>09:10</td>
-        <td>Panel discussion and Q&A</td>
-        <td>TBC</td>
-      </tr>
-      <tr>
-        <td>09:30</td>
-        <td>SCI v1.0</td>
-        <td>Henry TBC</td>
-      </tr>
-      <tr>
-        <td>09:40</td>
-        <td>Hackathon finalists</td>
-        <td>Abishek TBC</td>
-      </tr>
-      <tr>
-        <td>09:45</td>
-        <td>Panel discussion and Q&A</td>
-        <td>TBC</td>
-      </tr>
-      <tr>
-        <td>10:05</td>
-        <td>Training and Patterns</td>
-        <td>Bill TBC & Sarah TBC</td>
-      </tr>
-      <tr>
-        <td>10:15</td>
-        <td>Hackathon finalists</td>
-        <td>TBC</td>
-      </tr>
-      <tr>
-        <td>10:20</td>
-        <td>Panel discussion and Q&A</td>
-        <td>TBC</td>
-      </tr>
-      <tr>
-        <td>10:40</td>
-        <td>State of Green Software Report and Speaker Bureau</td>
-        <td>Asim Hussain</td>
-      </tr>
-      <tr>
-        <td>10:45</td>
         <td>Hackathon winners</td>
-        <td>Ismael Velasco</td>
+        <td>Ismael Velasco, Vaughan Knight</td>
+      </tr>
+      <tr>
+        <td>In Closing</td>
+        <td>Asim Hussain</td>
       </tr>
     </tbody>
   </table>
 </section>
-<script>
+<!-- <script>
   const tableBody = document.getElementById("tbody");
   const timezone = document.getElementById("timezone");
   const agenda = [
@@ -135,7 +133,7 @@
   if (timezone) {
     timezone.innerHTML = Intl.DateTimeFormat().resolvedOptions().timeZone;
   }
-</script>
+</script> -->
 <style>
   section {
     margin-top: 96px;
@@ -195,6 +193,11 @@
   }
   :global(td) {
     padding: 32px 16px;
+  }
+  td:first-of-type {
+    font-weight: 700;
+    color: #aecc53;
+    width: 50%;
   }
   @media (max-width: 1440px) {
     section::before,
