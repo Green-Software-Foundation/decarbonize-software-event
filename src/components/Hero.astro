@@ -8,7 +8,7 @@
     </div>
     <h1 class="title">Decarbonize <br /> Software</h1>
     <p class="subtitle">The latest advancements in green software</p>
-    <p class="time" id="time">November 10th - 4pm GMT (8am PT) - Online</p>
+    <p class="time" id="time">November 10th - 5:00-7:00pm GMT - Online</p>
     <div id="mc_embed_signup">
       <form
         action="https://foundation.us5.list-manage.com/subscribe/post?u=ddc99c7db248c3df0ef4f7d24&id=404bf38b27&f_id=006280e9f0"
@@ -104,15 +104,27 @@
   </div>
 </section>
 <script>
-  const date = new Date("November 10, 2022 17:00:00 GMT");
-  const formatedDate = date.toLocaleString("en-US", {
+  const dateStart = new Date("November 10, 2022 17:00:00 GMT");
+  const dateEnd = new Date("November 10, 2022 19:00:00 GMT");
+  const formatedDate = dateStart.toLocaleString("en-US", {
     month: "long",
     day: "2-digit",
   });
-  const formatedTime = date.toLocaleString("en-US", {
+  const timezone = dateStart
+    .toLocaleString("en-US", {
+      timeZoneName: "short",
+    })
+    .split(" ")
+    .pop();
+
+  const formatedTimeStart = dateStart.toLocaleString("en-US", {
     hour: "numeric",
     minute: "numeric",
-    timeZoneName: "short",
+  });
+
+  const formatedTimeEnd = dateEnd.toLocaleString("en-US", {
+    hour: "numeric",
+    minute: "numeric",
   });
   const nth = function (d: number) {
     if (d > 3 && d < 21) return "th";
@@ -130,8 +142,8 @@
   const timeElement = document.getElementById("time");
   if (timeElement) {
     timeElement.innerHTML = `${formatedDate}${nth(
-      date.getDate()
-    )} - ${formatedTime} - Online`;
+      dateStart.getDate()
+    )} - (${formatedTimeStart} - ${formatedTimeEnd}) ${timezone}  - Online`;
   }
 </script>
 <style>
