@@ -8,93 +8,41 @@
     </div>
     <h1 class="title">Decarbonize <br /> Software</h1>
     <p class="subtitle">The latest advancements in green software</p>
-    <p class="time" id="time">November 10th - 5:00-7:00pm GMT - Online</p>
-    <div id="mc_embed_signup">
-      <form
-        action="https://foundation.us5.list-manage.com/subscribe/post?u=ddc99c7db248c3df0ef4f7d24&id=404bf38b27&f_id=006280e9f0"
-        method="post"
-        id="mc-embedded-subscribe-form"
-        name="mc-embedded-subscribe-form"
-        class="validate"
-        target="_self"
-        novalidate
-      >
-        <div id="mc_embed_signup_scroll">
-          <div class="mc-field-group">
-            <input
-              type="email"
-              value=""
-              name="EMAIL"
-              class="required email"
-              id="mce-EMAIL"
-              placeholder="example@domain.com"
-              required
-            />
-            <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
-          </div>
-          <div class="checkbox-wrapper">
-            <input
-              type="checkbox"
-              value="1"
-              name="group[383329][1]"
-              id="mce-group[383329]-383329-0"
-            />
-            <span
-              >Also subscribe to the Green Software Foundation newsletter</span
-            >
-          </div>
-          <div id="mce-responses" class="clear">
-            <div class="response" id="mce-error-response" style="display:none">
-            </div>
-            <div
-              class="response"
-              id="mce-success-response"
-              style="display:none"
-            >
-            </div>
-          </div>
-          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-          <div style="position: absolute; left: -5000px;" aria-hidden="true">
-            <input
-              type="text"
-              name="b_ddc99c7db248c3df0ef4f7d24_404bf38b27"
-              tabindex="-1"
-              value=""
-            />
-          </div>
-          <div class="clear">
-            <input
-              type="submit"
-              value="Register"
-              name="subscribe"
-              id="mc-embedded-subscribe"
-              class="button"
-            />
-          </div>
-        </div>
-      </form>
-    </div>
-    <script
-      type="text/javascript"
-      src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
-    ></script><script type="text/javascript">
-      (function ($) {
-        window.fnames = new Array();
-        window.ftypes = new Array();
-        fnames[0] = "EMAIL";
-        ftypes[0] = "email";
-        fnames[1] = "FNAME";
-        ftypes[1] = "text";
-        fnames[2] = "LNAME";
-        ftypes[2] = "text";
-        fnames[3] = "ADDRESS";
-        ftypes[3] = "address";
-        fnames[4] = "PHONE";
-        ftypes[4] = "phone";
-      })(jQuery);
-      var $mcj = jQuery.noConflict(true);
+    <p class="time" id="time">Live now</p>
+    <!-- Begin JW Player Video Player - Cloud Hosted code -->
+    <script src="https://cdn.jwplayer.com/libraries/queE6nQa.js"></script>
+    <style>
+      .jw-state-idle .jw-controls {
+        background: rgba(0, 0, 0, 0) !important;
+      }
+      .jw-controls-backdrop {
+        background: rgba(0, 0, 0, 0) !important;
+      }
+    </style>
+
+    <div id="track04">Loading the player...</div>
+    <script type="text/javascript">
+      // wait for the DOM to be loaded
+      document.addEventListener("DOMContentLoaded", function (event) {
+        var playerInstance = jwplayer("track04");
+        playerInstance.setup({
+          file: "https://cdn3.wowza.com/1/ZklNKzdmSlpSd0dn/TmlyTU1y/hls/live/playlist.m3u8",
+          image:
+            "https://e3videos.s3-us-west-2.amazonaws.com/carbon-hack-22.png",
+          title: "",
+          mediaid: "V0EzdIgr",
+          androidhls: "true",
+          controls: "true",
+          width: "100%",
+          aspectratio: "16:9",
+          primary: "html5",
+          sharing: {
+            heading: "Sharing hashtag for Carbon Hack 22 - #CarbonHack22",
+          },
+        });
+      });
     </script>
-    <!--End mc_embed_signup-->
+    <!-- End JWPlayer Video Player code -->
   </div>
   <div class="illustration right">
     <img src="/images/hero-right.svg" alt="Trees & Plants" />
@@ -103,49 +51,7 @@
     <img src="/images/hero-mobile.svg" alt="Trees & Plants" />
   </div>
 </section>
-<script>
-  const dateStart = new Date("November 10, 2022 17:00:00 GMT");
-  const dateEnd = new Date("November 10, 2022 19:00:00 GMT");
-  const formatedDate = dateStart.toLocaleString("en-US", {
-    month: "long",
-    day: "2-digit",
-  });
-  const timezone = dateStart
-    .toLocaleString("en-US", {
-      timeZoneName: "short",
-    })
-    .split(" ")
-    .pop();
 
-  const formatedTimeStart = dateStart.toLocaleString("en-US", {
-    hour: "numeric",
-    minute: "numeric",
-  });
-
-  const formatedTimeEnd = dateEnd.toLocaleString("en-US", {
-    hour: "numeric",
-    minute: "numeric",
-  });
-  const nth = function (d: number) {
-    if (d > 3 && d < 21) return "th";
-    switch (d % 10) {
-      case 1:
-        return "st";
-      case 2:
-        return "nd";
-      case 3:
-        return "rd";
-      default:
-        return "th";
-    }
-  };
-  const timeElement = document.getElementById("time");
-  if (timeElement) {
-    timeElement.innerHTML = `${formatedDate}${nth(
-      dateStart.getDate()
-    )} - (${formatedTimeStart} - ${formatedTimeEnd}) ${timezone}  - Online`;
-  }
-</script>
 <style>
   .container {
     display: flex;
