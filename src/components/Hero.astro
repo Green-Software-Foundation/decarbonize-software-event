@@ -8,8 +8,14 @@
     </div>
     <h1 class="title">Decarbonize <br /> Software</h1>
     <p class="subtitle">The latest advancements in green software</p>
-    <p class="time" id="time"></p>
-   
+    <iframe
+      width="100%"
+      height="315"
+      src="https://www.youtube.com/embed/GS12M3cXwO8"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
   </div>
   <div class="illustration right">
     <img src="/images/hero-right.svg" alt="Trees & Plants" />
@@ -214,38 +220,3 @@
     }
   }
 </style>
-<script>
-  // Count down to 22nd of April 2023
-  var countDownDate = new Date("Nov 10, 2022 17:00:00 GMT").getTime();
-  var countDownDateEnd = new Date("Nov 10, 2022 19:00:00 GMT").getTime();
-
-  // Update the count down every 1 second
-  var x = setInterval(function () {
-    // Get today's date and time
-    var now = new Date().getTime();
-
-    // Find the distance between now and the count down date
-    var distance = countDownDate - now;
-    var distanceEnd = countDownDateEnd - now;
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor(
-      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    // Display the result in the element with id="demo"
-    document.getElementById("time").innerHTML =
-      "Live in " + hours + "h " + minutes + "m " + seconds + "s ";
-
-    // If the count down is finished, write some text
-    if (distance < 0 && distanceEnd > 0) {
-      clearInterval(x);
-      document.getElementById("time").innerHTML = "Live now";
-    } else if (distanceEnd < 0) {
-      clearInterval(x);
-      document.getElementById("time").innerHTML = "Livestream Ended";
-    }
-  }, 1000);
-</script>
