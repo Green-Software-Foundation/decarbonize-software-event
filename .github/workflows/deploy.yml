@@ -1,5 +1,7 @@
 name: Github Pages Astro CI
 
+env:
+  N
 on:
   # Trigger the workflow every time you push to the `main` branch
   # Using a different branch name? Replace `main` with your branch’s name
@@ -33,6 +35,8 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      DATOCMS_API_KEY: ${{ secrets.DATOCMS_API_KEY }}
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
