@@ -1,6 +1,5 @@
 name: Github Pages Astro CI
 
-env:
   N
 on:
   # Trigger the workflow every time you push to the `main` branch
