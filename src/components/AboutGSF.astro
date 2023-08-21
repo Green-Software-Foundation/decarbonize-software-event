@@ -1,0 +1,47 @@
+<section class="container">
+  <div class="wrapper">
+    <h1 class="section-title">About <span>Green Software Foundation</span></h1>
+    <p>
+      The Green Software Foundation is a non-profit organisation and part of the
+      Linux Foundation. Our mission is to build a trusted ecosystem of people,
+      standards, tooling and best practices for creating and building green
+      software. Head over to greensoftware.foundation to find out more about our
+      working groups and projects.
+    </p>
+  </div>
+</section>
+
+<style>
+  .wrapper {
+    background: #0a131a;
+    text-align: center;
+    padding: 4rem;
+    border-radius: 1rem;
+    position: relative;
+    max-width: 840px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .wrapper::before {
+    content: "";
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    width: calc(166px / 2);
+    height: calc(186px / 2);
+    background-image: url("/images/leaf-up.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .wrapper::after {
+    content: "";
+    position: absolute;
+    bottom: -1rem;
+    left: -1rem;
+    width: calc(166px / 2);
+    height: calc(186px / 2);
+    background-image: url("/images/leaf-down.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>

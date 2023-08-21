@@ -1,9 +1,9 @@
 ---
-import "@fontsource/nunito-sans/400.css";
-import "@fontsource/nunito-sans/600.css";
-import "@fontsource/nunito-sans/700.css";
-import "@fontsource/nunito-sans/800.css";
-import "@fontsource/nunito-sans/900.css";
+import "@fontsource/nunito/400.css";
+import "@fontsource/nunito/600.css";
+import "@fontsource/nunito/700.css";
+import "@fontsource/nunito/800.css";
+import "@fontsource/nunito/900.css";
 ---
 
 <!DOCTYPE html>
@@ -79,11 +79,11 @@ import "@fontsource/nunito-sans/900.css";
       <!-- <nav>
         <a href="#about">About</a>
         <a href="#agenda">Agenda</a>
-        <a href="#register">Register</a>
+        <a href="#register" class="cta">Register</a>
       </nav> -->
       <slot />
     </main>
-    <!-- <footer>
+    <footer>
       <div class="logo">
         <img src="/images/logo-gsf.svg" alt="GSF Logo" />
       </div>
@@ -100,10 +100,10 @@ import "@fontsource/nunito-sans/900.css";
         >
       </div>
       <p class="copyrights">
-        Copyright © 2022 Joint Development Foundation Projects, LLC, <br />
+        Copyright © 2023 Joint Development Foundation Projects, LLC, <br />
         Green Software Foundation Series
       </p>
-    </footer> -->
+    </footer>
     <style is:global>
       *,
       *::before,
@@ -119,7 +119,7 @@ import "@fontsource/nunito-sans/900.css";
       body {
       }
       html {
-        font-family: "Nunito Sans", sans-serif;
+        font-family: "Nunito", sans-serif;
         background-color: #0b161f;
         color: #fbfcf6;
         scroll-behavior: smooth;
@@ -127,7 +127,6 @@ import "@fontsource/nunito-sans/900.css";
       body {
         line-height: 1.5;
         -webkit-font-smoothing: antialiased;
-        padding: 2rem;
       }
 
       img,
@@ -161,73 +160,117 @@ import "@fontsource/nunito-sans/900.css";
         isolation: isolate;
       }
       .separator {
-        margin: auto;
+        margin: 4rem auto;
       }
 
       footer {
         text-align: center;
-        padding: 54px 0;
+        padding: 4rem 0;
       }
       footer img {
         margin: auto;
       }
       footer .logo {
-        margin-bottom: 18px;
+        margin-bottom: 1.125rem;
       }
       footer .links {
-        margin-bottom: 8px;
+        margin-bottom: 0.5rem;
       }
       footer .links a {
         color: inherit;
-        font-size: 14px;
+        font-size: 0.875rem;
       }
       footer .copyrights {
-        font-size: 14px;
+        font-size: 0.875rem;
       }
       nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 16px 32px;
+        grid-auto-flow: column;
         background-color: #e9edf2;
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: 700;
-        width: 400px;
         position: sticky;
-        margin-top: 16px;
-        top: 16px;
+        top: 1rem;
+        z-index: 100;
+        border-radius: 0.5rem;
+        box-shadow: 0px 4px 0.5rem 4px #05080c94;
+        text-align: center;
+        display: inline-grid;
         left: 50%;
         transform: translateX(-50%);
-        z-index: 100;
-        border-radius: 50px;
-        box-shadow: 0px 4px 8px 4px #05080c94;
+        padding: 0.25rem;
       }
       nav a {
         color: #11283c;
         text-decoration: none;
+        padding: 1rem 2rem;
       }
-      @media (max-width: 640px) {
-        nav {
-          bottom: 0;
-          top: initial;
-          position: fixed;
+      input,
+      button {
+        border-radius: 0.5rem;
+      }
+      .container {
+        width: 840px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .button {
+        background-color: #aecc53;
+        border: none;
+        padding: 0.75rem 2rem;
+        color: #111827;
+        font-weight: 700;
+        font-size: 1rem;
+        outline: none;
+        transition: box-shadow 0.2s ease-in-out;
+        cursor: pointer;
+        margin: 0;
+        height: initial;
+        text-decoration: none;
+        border-radius: 0.5rem;
+        display: inline-block;
+      }
+      .button:focus {
+        box-shadow: 0 0 0 3px rgb(174 204 83 / 50%);
+      }
+      .cta {
+        background-color: #aecc53;
+        border-radius: 6px;
+      }
+      .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        font-weight: 900;
+        line-height: 1.2;
+      }
+      .section-title span {
+        color: #aecc53;
+        display: block;
+      }
+      @media (max-width: 1024px) {
+        .container {
           width: 100%;
-          border-radius: 0;
-          padding: 8px 32px;
-          font-size: 14px;
+          padding: 0 4rem;
         }
-        footer {
-          padding: 64px;
-          padding-top: 32px;
+        .button {
+          font-size: 0.875rem;
+          padding: 0.5rem 1rem;
+        }
+        .section-title {
+          font-size: 1.5rem;
         }
         footer .logo {
           width: 120px;
-          margin: auto;
-          margin-bottom: 16px;
+          margin-left: auto;
+          margin-right: auto;
         }
         footer .links a,
         footer .copyrights {
-          font-size: 12px;
+          font-size: 0.75rem;
+        }
+      }
+      @media (max-width: 640px) {
+        .container {
+          padding: 0 2rem;
         }
       }
     </style>

@@ -1,51 +1,54 @@
 <section id="about">
-  <h2>Online Event</h2>
-  <p class="subtitle">By <span>Green Software Foundation</span></p>
-  <img
-    class="separator"
-    src="/images/separator-horizontal.svg"
-    alt="Separator"
-  />
-  <div class="content">
-    <h3>
-      Combat climate change using green software principles and best practices.
-    </h3>
-    <p>
-      Green Software Foundation is excited to host an event during COP27 to
-      highlight advancements in decarbonizing software, including the launch of
-      a Software Carbon Intensity Specification – a new ISO standard (Pending
-      Approval) in measuring green software, a new training program by The Linux
-      Foundation, and a Patterns Catalogue for software engineers at every level
-      to identify specific, actionable steps to green software.
-    </p>
-    <p>
-      Developing and prioritizing software solutions that use more clean energy
-      and guide climate-conscious energy consumption will dramatically reduce
-      the carbon load needed for technology to meet future needs.
-    </p>
-    <p>
-      Now, a wide range of tools and resources will help get us closer to that
-      reality.
-    </p>
+  <div class="container">
+    <h1 class="section-title">
+      Online Event
+
+      <br />
+      <span class="subtitle"
+        >By <a
+          href="https://greensoftware.foundation"
+          target="_blank"
+          rel="noopener noreferrer">Green Software Foundation</a
+        >
+      </span>
+    </h1>
+    <div class="content">
+      <h2>
+        Combat climate change using green software principles and best
+        practices.
+      </h2>
+      <p>
+        Decarbonize Software is an annual event by the Green Software Foundation
+        showcasing the advancements in Green Software by the community. After an
+        incredible 2022 event where we announced the Software Carbon Intensity
+        Specification, our new Linux Foundation training program and our
+        catalogue of Green Software Patterns - we're handing much of the 2023
+        event to our community to see what you built with the portfolio of tools
+        from the GSF. We're also excited to share what we've been up to at the
+        Foundation.
+      </p>
+      <p style="font-weight: bold;">
+        Our 2023 event will take place on 16th November 2023.
+      </p>
+    </div>
   </div>
 </section>
 <style>
   section {
-    margin-top: 200px;
     text-align: center;
-    min-height: 1024px;
     position: relative;
   }
   section::before {
     content: "";
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 0px;
     width: 100%;
     height: 100%;
     background: url("/images/info-left.svg");
     background-position: left;
     background-repeat: no-repeat;
+    background-size: contain;
     user-select: none;
     pointer-events: none;
   }
@@ -59,76 +62,59 @@
     background: url("/images/info-right.svg");
     background-position: right;
     background-repeat: no-repeat;
+    background-size: contain;
     user-select: none;
     pointer-events: none;
   }
-  h2 {
-    font-weight: 700;
-    font-size: 36px;
-    margin-bottom: 16px;
-  }
+
   .subtitle {
-    font-size: 30px;
-    margin-bottom: 44px;
+    font-size: 1.25rem;
   }
-  .subtitle span {
+  .subtitle a {
     color: #aecc53;
+    text-decoration: none;
   }
   .separator {
-    margin-bottom: 64px;
+    margin-bottom: 2rem;
   }
   .content {
     max-width: 840px;
     margin: auto;
   }
-  .content h3 {
+  .content h2 {
     font-weight: 900;
-    font-size: 48px;
-    line-height: 55px;
+    font-size: 2rem;
     text-transform: uppercase;
-    margin-bottom: 48px;
+    margin-bottom: 3rem;
   }
   .content p {
-    font-size: 20px;
-    line-height: 28px;
-    margin-bottom: 32px;
-    text-align: left;
-    padding: 0 96px;
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    padding: 0 6rem;
   }
-  @media (max-width: 640px) {
-    section {
-      margin-top: 64px;
-      margin-bottom: 64px;
-      padding: 0 32px;
-      min-height: initial;
+  @media (max-width: 1024px) {
+    .subtitle {
+      font-size: 1rem;
     }
+    .content {
+      max-width: 768px;
+    }
+    .content h2 {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      margin-bottom: 2rem;
+    }
+    .content p {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      margin-bottom: 1rem;
+      padding: 0;
+    }
+  }
+  @media (max-width: 768px) {
     section::before,
     section::after {
       opacity: 0.2;
-    }
-
-    h2 {
-      font-size: 24px;
-      margin-bottom: 0px;
-    }
-    .subtitle {
-      font-size: 20px;
-      margin-bottom: 16px;
-    }
-    .separator {
-      margin-bottom: 32px;
-    }
-    .content h3 {
-      font-size: 24px;
-      line-height: 33px;
-      margin-bottom: 32px;
-      text-align: left;
-    }
-    .content p {
-      font-size: 16px;
-      line-height: 24px;
-      margin-bottom: 16px;
-      padding: 0;
     }
   }
 </style>
