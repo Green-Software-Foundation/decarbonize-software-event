@@ -1,6 +1,5 @@
 name: Github Pages Astro CI
 
-  N
 on:
   # Trigger the workflow every time you push to the `main` branch
   # Using a different branch name? Replace `main` with your branch’s name
