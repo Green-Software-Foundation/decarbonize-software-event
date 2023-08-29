@@ -205,7 +205,7 @@ import "@fontsource/nunito/900.css";
         padding: 1rem 2rem;
       }
       input,
-      button {
+      button, select {
         border-radius: 0.5rem;
       }
       .container {
@@ -221,7 +221,7 @@ import "@fontsource/nunito/900.css";
         font-weight: 700;
         font-size: 1rem;
         outline: none;
-        transition: box-shadow 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
         cursor: pointer;
         margin: 0;
         height: initial;
@@ -229,8 +229,27 @@ import "@fontsource/nunito/900.css";
         border-radius: 0.5rem;
         display: inline-block;
       }
+      .button:hover{
+        background-color: #9ec44a;
+      }
       .button:focus {
         box-shadow: 0 0 0 3px rgb(174 204 83 / 50%);
+      }
+      .button[disabled] {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+      .button[data-loading="true"] {
+        animation: loading 0.5s ease-in-out infinite alternate;
+      }
+      /* Make disable animation */
+      @keyframes loading {
+        0% {
+          opacity: 0.6;
+        }
+        100% {
+          opacity: 0.8;
+        }
       }
       .cta {
         background-color: #aecc53;

@@ -1,3 +1,7 @@
+---
+import RegisterForm from "./RegisterForm";
+---
+
 <section id="register" class="wrapper">
   <div class="illustration left">
     <img class="desktop" src="/images/hero-left.svg" alt="Trees & Plants" />
@@ -22,92 +26,7 @@
     </div>
     <p class="subtitle">The latest advancements in green software</p>
     <p class="time" id="time">November 16th - 2:00pm GMT - Online</p>
-    <div id="mc_embed_signup">
-      <form
-        action="https://foundation.us5.list-manage.com/subscribe/post?u=ddc99c7db248c3df0ef4f7d24&id=404bf38b27&f_id=006280e9f0"
-        method="post"
-        id="mc-embedded-subscribe-form"
-        name="mc-embedded-subscribe-form"
-        class="validate"
-        target="_self"
-        novalidate
-      >
-        <div id="mc_embed_signup_scroll">
-          <div class="mc-field-group">
-            <input
-              type="email"
-              value=""
-              name="EMAIL"
-              class="required email"
-              id="mce-EMAIL"
-              placeholder="example@domain.com"
-              required
-            />
-            <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
-          </div>
-          <div class="checkbox-wrapper">
-            <input
-              type="checkbox"
-              value="1"
-              name="group[383329][1]"
-              id="mce-group[383329]-383329-0"
-            />
-            <span
-              >Also subscribe to the Green Software Foundation newsletter</span
-            >
-          </div>
-          <div id="mce-responses" class="clear">
-            <div class="response" id="mce-error-response" style="display:none">
-            </div>
-            <div
-              class="response"
-              id="mce-success-response"
-              style="display:none"
-            >
-            </div>
-          </div>
-          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-          <div style="position: absolute; left: -5000px;" aria-hidden="true">
-            <input
-              type="text"
-              name="b_ddc99c7db248c3df0ef4f7d24_404bf38b27"
-              tabindex="-1"
-              value=""
-            />
-          </div>
-          <div class="clear">
-            <input
-              type="submit"
-              value="Notify Me"
-              name="subscribe"
-              id="mc-embedded-subscribe"
-              class="button"
-            />
-          </div>
-        </div>
-      </form>
-    </div>
-    <script
-      type="text/javascript"
-      src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
-    ></script><script type="text/javascript">
-      (function ($) {
-        window.fnames = new Array();
-        window.ftypes = new Array();
-        fnames[0] = "EMAIL";
-        ftypes[0] = "email";
-        fnames[1] = "FNAME";
-        ftypes[1] = "text";
-        fnames[2] = "LNAME";
-        ftypes[2] = "text";
-        fnames[3] = "ADDRESS";
-        ftypes[3] = "address";
-        fnames[4] = "PHONE";
-        ftypes[4] = "phone";
-      })(jQuery);
-      var $mcj = jQuery.noConflict(true);
-    </script>
-    <!--End mc_embed_signup-->
+    <RegisterForm client:idle/>
   </div>
   <div class="illustration right">
     <img class="desktop" src="/images/hero-right.svg" alt="Trees & Plants" />
@@ -183,69 +102,6 @@
     color: #c8d3dd;
     margin-bottom: 2.5rem;
   }
-  .mc-field-group {
-    width: 100%;
-    max-width: 420px;
-    margin: auto;
-    padding: 0;
-  }
-  .mc-field-group input {
-    background: #11283c;
-    border: none;
-    padding: 1rem;
-    color: inherit;
-    font-size: 1rem;
-    outline: none;
-    transition: all 0.2s ease-in-out;
-    font-family: "Nunito Sans";
-    width: 100%;
-    border: 2px solid transparent;
-  }
-  .mc-field-group input:focus {
-    box-shadow: 0 0 0 3px rgb(145 167 188 / 50%);
-  }
-  .mc-field-group input::placeholder {
-    color: #ffffff;
-    opacity: 0.3;
-  }
-  :global(.mce_inline_error) {
-    background-color: transparent;
-    margin-bottom: 0;
-  }
-  .button-wrapper {
-    text-align: center;
-    margin-top: 1.5rem;
-  }
-
-  :global(#mc_embed_signup input.mce_inline_error) {
-    border-color: #f13a38;
-  }
-  :global(#mc_embed_signup div.mce_inline_error) {
-    color: #f13a38;
-    font-size: 0.75rem;
-    margin-top: 0.25rem;
-    background: none;
-  }
-  .checkbox-wrapper {
-    margin-top: 1rem;
-    font-size: 0.875rem;
-    font-weight: 400;
-    margin-bottom: 1rem;
-    max-width: 420px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  #mce-responses {
-    width: 360px;
-    margin: auto;
-  }
-  #mce-success-response {
-    background: #aecc53;
-    color: #111827;
-    font-weight: 600;
-    margin-bottom: 2rem;
-    padding: 1rem 0;
-  }
 
   @media (max-width: 1024px) {
     .wrapper {
@@ -263,17 +119,6 @@
     .time {
       font-size: 1rem;
       margin-bottom: 0.75rem;
-    }
-    .mc-field-group input {
-      padding: 0.75rem;
-      max-width: 360px;
-    }
-    .checkbox-wrapper {
-      max-width: 360px;
-      font-size: 0.75rem;
-    }
-    #mce-success-response {
-      font-size: 0.875rem;
     }
   }
   @media (max-width: 768px) {

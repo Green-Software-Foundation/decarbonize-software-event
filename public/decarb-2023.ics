@@ -1,0 +1,9 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+DTSTART:20231116T140000Z
+DTEND:20231116T160000Z
+SUMMARY:Decarbonize Software
+DESCRIPTION:Decarbonize Software is an annual event by the Green Software Foundation showcasing the advancements in Green Software by the community. After an incredible 2022 event where we announced the Software Carbon Intensity Specification, our new Linux Foundation training program and our catalogue of Green Software Patterns - we're handing much of the 2023 event to our community to see what you built with the portfolio of tools from the GSF. We're also excited to share what we've been up to at the Foundation.
+END:VEVENT
+END:VCALENDAR

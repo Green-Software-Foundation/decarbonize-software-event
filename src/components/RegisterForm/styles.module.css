@@ -1,0 +1,129 @@
+.form {
+  max-width: 420px;
+  margin: auto;
+}
+.field {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+.inputWrapper {
+  width: 100%;
+  padding: 0;
+  position: relative;
+}
+.label {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: 0.2s ease-out;
+}
+:where(.input, .select) {
+  background: #11283c;
+  border: none;
+  padding: 1rem;
+  color: inherit;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  font-family: "Nunito Sans";
+  width: 100%;
+  border: 2px solid transparent;
+}
+:where(.input, .select):focus {
+  box-shadow: 0 0 0 3px rgb(145 167 188 / 50%);
+}
+.input::placeholder {
+  color: #ffffff;
+  opacity: 0;
+}
+.isFloating {
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+.isFloating + .label {
+  top: 1rem;
+  font-size: 12px;
+  color: #aecc53;
+}
+.button-wrapper {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+[data-invalid] {
+  border-color: #f13a38;
+}
+.error {
+  color: #f13a38;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+.checkboxRoot {
+  background-color: #11283c;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: content-box;
+  padding: 0.25rem;
+  border: none;
+}
+.checkbox{
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  
+}
+.checkboxIndicator {
+  color: #aecc53;
+}
+.successWrapper{
+  max-width: 420px;
+  margin: auto;
+}
+.successMsg{
+  background-color: #142532;
+  border: 2px solid #11202b;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #aecc53;
+}
+.calBtn{
+  margin-bottom: 1rem;
+}
+.social{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+.social a{
+  color: #ffffff;
+}
+.social svg{
+  width: 2rem;
+  height: 2rem;
+  transition: all 0.2s ease-in-out;
+}
+.errorWrapper{
+  max-width: 420px;
+  margin: auto;
+}
+.errorMsg{
+  background-color: #160909;
+  border: 2px solid #250f0f;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #f13a38;
+}
