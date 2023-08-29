@@ -44,4 +44,17 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+  @media (max-width: 640px) {
+    .wrapper {
+      padding: 2rem;
+    }
+    .wrapper::before {
+      width: calc(166px / 3);
+      height: calc(186px / 3);
+    }
+    .wrapper::after {
+      width: calc(166px / 3);
+      height: calc(186px / 3);
+    }
+  }
 </style>

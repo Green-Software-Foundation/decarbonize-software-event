@@ -50,10 +50,26 @@
       line-height: 2.25rem;
     }
     .author {
-      font-size: 1.125rem;
+      font-size: 1.25rem;
     }
     .position {
+      font-size: 1.125rem;
+    }
+  }
+  @media (max-width: 640px) {
+    .content {
+      grid-template-columns: 3rem 1fr;
+      gap: 1rem;
+    }
+    .quote {
       font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+    .author {
+      font-size: 1rem;
+    }
+    .position {
+      font-size: 0.875rem;
     }
   }
 </style>

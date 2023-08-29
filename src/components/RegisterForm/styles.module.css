@@ -30,6 +30,7 @@
   font-family: "Nunito Sans";
   width: 100%;
   border: 2px solid transparent;
+  height: 3.75rem;
 }
 :where(.input, .select):focus {
   box-shadow: 0 0 0 3px rgb(145 167 188 / 50%);
