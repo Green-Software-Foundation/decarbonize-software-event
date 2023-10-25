@@ -1,125 +1,100 @@
 <section id="agenda">
   <h2>Agenda</h2>
+  <p>Timezone (
+    <span id="timezone"></span>
+    )</p>
   <table>
     <tbody id="tbody">
-      <tr>
-        <td>Welcome</td>
-        <td>Asim Hussain</td>
-      </tr>
-      <tr>
-        <td>Panel discussion and Q&A</td>
-        <td>Asim Hussain, Sanjay Podder, Ben Logan, Niels Freier</td>
-      </tr>
-      <tr>
-        <td>SCI v1.0</td>
-        <td>Henry Richardson</td>
-      </tr>
-      <tr>
-        <td>Hackathon finalists</td>
-        <td>Abishek Gupta</td>
-      </tr>
-      <tr>
-        <td>Panel discussion and Q&A</td>
-        <td
-          >Tammy McClellan, Scott Chamberlin, Lisa McNally, Santiago
-          Fontanarrosa</td
-        >
-      </tr>
-      <tr>
-        <td>Training and Patterns</td>
-        <td>Bill Johnson, Sarah Hsu</td>
-      </tr>
-      <tr>
-        <td>Hackathon finalists</td>
-        <td>Bill Johnson</td>
-      </tr>
-      <tr>
-        <td>Panel discussion and Q&A</td>
-        <td>Anne Currie, Colleen Josephson, Ally Vaughn, Chris Lloyd Jones</td>
-      </tr>
-      <tr>
-        <td>State of Green Software Report</td>
-        <td>Ismael Velasco</td>
-      </tr>
-      <tr>
-        <td>Speaker Bureau</td>
-        <td>Asim Hussain</td>
-      </tr>
-      <tr>
-        <td>Carbon Aware SDK v1.0</td>
-        <td>Vaughan Knight</td>
-      </tr>
-      <tr>
-        <td>Hackathon winners</td>
-        <td>Ismael Velasco, Vaughan Knight</td>
-      </tr>
-      <tr>
-        <td>In Closing</td>
-        <td>Asim Hussain</td>
-      </tr>
+     
     </tbody>
   </table>
 </section>
-<!-- <script>
+<script>
   const tableBody = document.getElementById("tbody");
   const timezone = document.getElementById("timezone");
   const agenda = [
     {
-      time: new Date("November 10, 2022 17:00:00 GMT"),
-      title: "State of Green Software",
-      speaker: "Asim Hussain",
+        time: new Date("November 16, 2023 14:00:00 GMT"),
+        title: "Introduction and 2023 in Review",
+        speaker: {
+            name: "Adam Jackson, Namrata Narayan & Asim Hussain",
+            position: "Green Software Foundation"
+        }
     },
     {
-      time: new Date("November 10, 2022 17:05:00 GMT"),
-      title: "Carbon Aware SDK v 1.0",
-      speaker: "Vaughan Knight",
+        time: new Date("November 16, 2023 14:10:00 GMT"),
+        title: "Driving Climate Change Solutions with AI",
+        speaker: {
+            name: "Charlotte Degot & Diana Dimitrova",
+            position: "CEO and Co-Founder of CO2 AI & Managing Director and Partner at BCG"
+        }
     },
     {
-      time: new Date("November 10, 2022 17:10:00 GMT"),
-      title: "Panel discussion and Q&A",
-      speaker: "TBC",
+        time: new Date("November 16, 2023 14:25:00 GMT"),
+        title: "Engineering Excellence with GSF Principles & Patterns",
+        speaker: {
+            name: "Chris Howard",
+            position: "Open Source Program Office Lead, EPAM"
+        }
     },
     {
-      time: new Date("November 10, 2022 17:30:00 GMT"),
-      title: "SCI v1.0",
-      speaker: "Henry TBC",
+        time: new Date("November 16, 2023 14:40:00 GMT"),
+        title: "Responsible AI: Fireside Chat",
+        speaker: {
+            name: "Jesse Mccrosky",
+            position: "Head of Sustainability and Social Change and Principal Data Scientist at Thoughtworks"
+        }
     },
     {
-      time: new Date("November 10, 2022 17:40:00 GMT"),
-      title: "Hackathon finalists",
-      speaker: "Abishek TBC",
+        time: new Date("November 16, 2023 15:00:00 GMT"),
+        title: "High-quality energy data for emission optimizations",
+        speaker: {
+            name: "Johann Hemmann, Yvette Nartey & Jonathan Noormann",
+            position: "CODE University"
+        }
     },
     {
-      time: new Date("November 10, 2022 17:45:00 GMT"),
-      title: "Panel discussion and Q&A",
-      speaker: "TBC",
+        time: new Date("November 16, 2023 15:15:00 GMT"),
+        title: "Our new GSF Champions",
+        speaker: {
+            name: "Adam Jackson, Namrata Narayan",
+            position: "Green Software Foundation"
+        }
     },
     {
-      time: new Date("November 10, 2022 18:05:00 GMT"),
-      title: "Training and Patterns",
-      speaker: "Bill TBC & Sarah TBC",
+        time: new Date("November 16, 2023 15:35:00 GMT"),
+        title: "Towards a Sustainable Software Engineering Framework",
+        speaker: {
+            name: "Angel Doru Cataron & Stefanie Wolf",
+            position: "Siemens"
+        }
     },
     {
-      time: new Date("November 10, 2022 18:15:00 GMT"),
-      title: "Hackathon finalists",
-      speaker: "TBC",
+        time: new Date("November 16, 2023 16:00:00 GMT"),
+        title: "Introducing the Impact Framework",
+        speaker: {
+            name: "Asim Hussain",
+            position: "Chair & Executive Director at Green Software Foundation"
+        }
     },
     {
-      time: new Date("November 10, 2022 18:20:00 GMT"),
-      title: "Panel discussion and Q&A",
-      speaker: "TBC",
+        time: new Date("November 16, 2023 16:25:00 GMT"),
+        title: "Emissions Impossible: From home insights to a greener workplace",
+        speaker: {
+            name: "Dan Benitah & Vaughan Knight",
+            position: "Avanade"
+        }
     },
     {
-      time: new Date("November 10, 2022 18:40:00 GMT"),
-      title: "State of Green Software Report and Speaker Bureau",
-      speaker: "Asim Hussain",
-    },
-    {
-      time: new Date("November 10, 2022 18:45:00 GMT"),
-      title: "Hackathon winners",
-      speaker: "Ismael Velasco",
-    },
-  ];
+        time: new Date("November 16, 2023 16:40:00 GMT"),
+        title: "Closing Remarks",
+        speaker: {
+            name: "GSF Team",
+            position: ""
+        }
+    }
+];
+
   if (tableBody) {
     tableBody.innerHTML = agenda
       .map(
@@ -127,14 +102,14 @@
           `<tr><td class="time">${item.time.toLocaleTimeString("en-GB", {
             hour: "2-digit",
             minute: "2-digit",
-          })}</td><td>${item.title}</td><td>${item.speaker}</td></tr>`
+          })}</td><td>${item.title}</td><td><span class="speaker-name">${item.speaker.name}</span><span class="speaker-position">${item.speaker.position}</span></td></tr>`
       )
       .join("");
   }
   if (timezone) {
     timezone.innerHTML = Intl.DateTimeFormat().resolvedOptions().timeZone;
   }
-</script> -->
+</script>
 <style>
   section {
     margin-top: 96px;
@@ -178,7 +153,7 @@
     font-weight: 400;
     font-size: 20px;
     text-align: center;
-    margin-bottom: 96px;
+    margin-bottom: 32px;
   }
   p span {
     color: #aecc53;
@@ -195,10 +170,20 @@
   :global(td) {
     padding: 32px 16px;
   }
-  td:first-of-type {
+  :global(td:nth-of-type(2)) {
     font-weight: 700;
     color: #aecc53;
     width: 50%;
+  }
+  :global(.speaker-name) {
+    font-weight: bold;
+    display: block;
+  }
+  :global(.speaker-position) {
+    font-size: 16px;
+    font-weight: normal;
+    display: block;
+    opacity: 0.6;
   }
   @media (max-width: 1440px) {
     section::before,
