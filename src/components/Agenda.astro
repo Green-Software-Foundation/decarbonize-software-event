@@ -16,82 +16,89 @@
     {
         time: new Date("November 16, 2023 14:00:00 GMT"),
         title: "Introduction and 2023 in Review",
-        speaker: {
+        speakers: [{
             name: "Adam Jackson, Namrata Narayan & Asim Hussain",
             position: "Green Software Foundation"
-        }
+        }]
     },
     {
         time: new Date("November 16, 2023 14:10:00 GMT"),
         title: "Driving Climate Change Solutions with AI",
-        speaker: {
+        speakers: [{
             name: "Charlotte Degot & Diana Dimitrova",
             position: "CEO and Co-Founder of CO2 AI & Managing Director and Partner at BCG"
-        }
+        }]
     },
     {
         time: new Date("November 16, 2023 14:25:00 GMT"),
         title: "Engineering Excellence with GSF Principles & Patterns",
-        speaker: {
+        speakers: [{
             name: "Chris Howard",
             position: "Open Source Program Office Lead, EPAM"
-        }
+        }]
     },
     {
         time: new Date("November 16, 2023 14:40:00 GMT"),
         title: "Responsible AI: Fireside Chat",
-        speaker: {
+        speakers: [{
             name: "Jesse Mccrosky",
             position: "Head of Sustainability and Social Change and Principal Data Scientist at Thoughtworks"
-        }
+        }]
     },
     {
         time: new Date("November 16, 2023 15:00:00 GMT"),
         title: "High-quality energy data for emission optimizations",
-        speaker: {
+        speakers: [{
             name: "Johann Hemmann, Yvette Nartey & Jonathan Noormann",
             position: "CODE University"
-        }
+        }]
     },
     {
         time: new Date("November 16, 2023 15:15:00 GMT"),
         title: "Our new GSF Champions",
-        speaker: {
+        speakers: [{
             name: "Adam Jackson, Namrata Narayan",
             position: "Green Software Foundation"
-        }
+        }]
     },
     {
         time: new Date("November 16, 2023 15:35:00 GMT"),
         title: "Towards a Sustainable Software Engineering Framework",
-        speaker: {
+        speakers: [{
             name: "Angel Doru Cataron & Stefanie Wolf",
             position: "Siemens"
-        }
+        }]
     },
     {
         time: new Date("November 16, 2023 16:00:00 GMT"),
         title: "Introducing the Impact Framework",
-        speaker: {
+        speakers: [{
             name: "Asim Hussain",
             position: "Chair & Executive Director at Green Software Foundation"
-        }
+        }, {
+            name: "Navveen Balani",
+            position: "Chief Technologist, Technology Sustainability Innovation at Accenture"
+        },
+        {
+            name: "Srinivasan Rakhunathan",
+            position: "Senior Program Manager at Microsoft"
+        }]
     },
     {
         time: new Date("November 16, 2023 16:25:00 GMT"),
         title: "Emissions Impossible: From home insights to a greener workplace",
-        speaker: {
+        speakers: [{
             name: "Dan Benitah & Vaughan Knight",
             position: "Avanade"
-        }
+        }]
     },
     {
         time: new Date("November 16, 2023 16:40:00 GMT"),
         title: "Closing Remarks",
-        speaker: {
+        speakers: [{
             name: "GSF Team",
             position: ""
-        }
+        }]
     }
 ];
 
@@ -102,7 +109,14 @@
           `<tr><td class="time">${item.time.toLocaleTimeString("en-GB", {
             hour: "2-digit",
             minute: "2-digit",
-          })}</td><td>${item.title}</td><td><span class="speaker-name">${item.speaker.name}</span><span class="speaker-position">${item.speaker.position}</span></td></tr>`
+          })}</td><td>${item.title}</td><td>
+            ${item.speakers
+              .map(
+                (speaker) =>
+                  `<span class="speaker-wrapper"><span class="speaker-name">${speaker.name}</span><span class="speaker-position">${speaker.position}</span></span>`
+              )
+              .join("")}
+            </td></tr>`
       )
       .join("");
   }
@@ -175,6 +189,12 @@
     color: #aecc53;
     width: 50%;
   }
+  :global(.speaker-wrapper){
+    display: block;
+  }
+  :global(.speaker-wrapper:not(:last-of-type)){
+    margin-bottom: 16px;
+  }
   :global(.speaker-name) {
     font-weight: bold;
     display: block;
@@ -185,6 +205,7 @@
     display: block;
     opacity: 0.6;
   }
+
   @media (max-width: 1440px) {
     section::before,
     section::after {
