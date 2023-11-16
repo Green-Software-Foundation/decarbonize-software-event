@@ -27,7 +27,13 @@ import RegisterForm from "./RegisterForm";
     <p class="subtitle">The latest advancements in green software</p>
     <p class="time" id="time">Live now</p>
     <!-- <RegisterForm client:idle/> -->
-    <iframe width="100%" height="400" src="https://www.youtube.com/embed/fGFeHaYtf5A?si=rjlZR7SE3grBRb_c" title="Decarbonize Software" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe
+      width="100%"
+      height="400"
+      src="https://www.youtube.com/embed/fGFeHaYtf5A?si=rjlZR7SE3grBRb_c"
+      title="Decarbonize Software"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
   </div>
   <div class="illustration right">
     <img class="desktop" src="/images/hero-right.svg" alt="Trees & Plants" />
@@ -58,12 +64,33 @@ import RegisterForm from "./RegisterForm";
   //       return "th";
   //   }
   // };
-  // const timeElement = document.getElementById("time");
-  // if (timeElement) {
-  //   timeElement.innerHTML = `${formatedDate}${nth(
-  //     date.getDate()
-  //   )} - ${formatedTime} - Online`;
-  // }
+  function updateStatus() {
+    const currentTime = new Date().getTime(); // Current time in milliseconds
+    const startTime = new Date("2023-11-16T14:00:00Z").getTime(); // Start time in milliseconds (14:00 GMT)
+    const endTime = new Date("2023-11-16T17:00:00Z").getTime(); // End time in milliseconds (16:40 GMT)
+
+    const timeElement = document.getElementById("time");
+
+    if (currentTime < startTime) {
+      // Before the event starts
+      const timeLeft = startTime - currentTime;
+      const minutes = Math.floor(timeLeft / 60000);
+      const seconds = Math.floor((timeLeft % 60000) / 1000);
+      timeElement.innerHTML = `Live in ${minutes}min ${seconds}s`;
+    } else if (currentTime >= startTime && currentTime <= endTime) {
+      // During the event
+      timeElement.innerHTML = "Live now";
+    } else {
+      // After the event ends
+      timeElement.innerHTML = "Live ended";
+    }
+  }
+
+  // Update the status every second
+  setInterval(updateStatus, 1000);
+
+  // Initial call to set the correct status on page load
+  updateStatus();
 </script>
 <style>
   .wrapper {
