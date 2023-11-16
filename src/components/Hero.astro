@@ -25,7 +25,7 @@ import RegisterForm from "./RegisterForm";
       </svg>
     </div>
     <p class="subtitle">The latest advancements in green software</p>
-    <p class="time" id="time">Live now</p>
+    <p class="time" id="time">Watch on Demand</p>
     <!-- <RegisterForm client:idle/> -->
     <iframe
       width="100%"
@@ -64,33 +64,33 @@ import RegisterForm from "./RegisterForm";
   //       return "th";
   //   }
   // };
-  function updateStatus() {
-    const currentTime = new Date().getTime(); // Current time in milliseconds
-    const startTime = new Date("2023-11-16T14:00:00Z").getTime(); // Start time in milliseconds (14:00 GMT)
-    const endTime = new Date("2023-11-16T17:00:00Z").getTime(); // End time in milliseconds (16:40 GMT)
+  // function updateStatus() {
+  //   const currentTime = new Date().getTime(); // Current time in milliseconds
+  //   const startTime = new Date("2023-11-16T14:00:00Z").getTime(); // Start time in milliseconds (14:00 GMT)
+  //   const endTime = new Date("2023-11-16T17:00:00Z").getTime(); // End time in milliseconds (16:40 GMT)
 
-    const timeElement = document.getElementById("time");
+  //   const timeElement = document.getElementById("time");
 
-    if (currentTime < startTime) {
-      // Before the event starts
-      const timeLeft = startTime - currentTime;
-      const minutes = Math.floor(timeLeft / 60000);
-      const seconds = Math.floor((timeLeft % 60000) / 1000);
-      timeElement.innerHTML = `Live in ${minutes}min ${seconds}s`;
-    } else if (currentTime >= startTime && currentTime <= endTime) {
-      // During the event
-      timeElement.innerHTML = "Live now";
-    } else {
-      // After the event ends
-      timeElement.innerHTML = "Live ended";
-    }
-  }
+  //   if (currentTime < startTime) {
+  //     // Before the event starts
+  //     const timeLeft = startTime - currentTime;
+  //     const minutes = Math.floor(timeLeft / 60000);
+  //     const seconds = Math.floor((timeLeft % 60000) / 1000);
+  //     timeElement.innerHTML = `Live in ${minutes}min ${seconds}s`;
+  //   } else if (currentTime >= startTime && currentTime <= endTime) {
+  //     // During the event
+  //     timeElement.innerHTML = "Live now";
+  //   } else {
+  //     // After the event ends
+  //     timeElement.innerHTML = "Live ended";
+  //   }
+  // }
 
-  // Update the status every second
-  setInterval(updateStatus, 1000);
+  // // Update the status every second
+  // setInterval(updateStatus, 1000);
 
-  // Initial call to set the correct status on page load
-  updateStatus();
+  // // Initial call to set the correct status on page load
+  // updateStatus();
 </script>
 <style>
   .wrapper {
