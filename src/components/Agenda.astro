@@ -1,8 +1,8 @@
 <section id="agenda">
   <h2>Agenda</h2>
-  <p>Timezone (
+  <!-- <p>Timezone (
     <span id="timezone"></span>
-    )</p>
+    )</p> -->
   <table>
     <tbody id="tbody">
      
@@ -105,15 +105,11 @@
         }]
     }
 ];
-
   if (tableBody) {
     tableBody.innerHTML = agenda
       .map(
         (item) =>
-          `<tr><td class="time">${item.time.toLocaleTimeString("en-GB", {
-            hour: "2-digit",
-            minute: "2-digit",
-          })}</td><td>${item.title}</td><td>
+          `<tr><td>${item.title}</td><td>
             ${item.speakers
               .map(
                 (speaker) =>
@@ -188,7 +184,7 @@
   :global(td) {
     padding: 32px 16px;
   }
-  :global(td:nth-of-type(2)) {
+  :global(td:nth-of-type(1)) {
     font-weight: 700;
     color: #aecc53;
     width: 50%;
